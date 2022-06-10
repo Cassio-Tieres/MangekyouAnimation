@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouseover e mouseout</title>
+
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2%;
+            background-color: black;
+        }
+        img {
+            width: 40%;
+            height: 40%;
+        }
+
+        .sharingan-animation.move {
+            animation: rotation 0.001s infinite;
+        }
+        @keyframes rotation {
+            from {
+                transform:rotate(10turn);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src="imgs/sharingan.png" alt="Sharingan" id="sharingan-animation" class="sharingan-animation">
+    <script>
+        let sharingan = document.getElementById('sharingan-animation');
+
+        sharingan.addEventListener('mouseover', function() {
+            sharingan.classList.toggle('move');
+        }); 
+        sharingan.addEventListener('mouseout', function() {
+            sharingan.classList.toggle('move');
+        }); 
+    </script>
+</body>
+</html>
